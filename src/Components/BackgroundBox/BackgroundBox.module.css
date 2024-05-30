@@ -1,5 +1,6 @@
+/* Styles for the container holding the background image */
 .con {
-	display: flex !important;
+	display: flex;
 	align-items: center;
 	justify-content: center;
 	width: 100vw;
@@ -9,4 +10,5 @@
 	background-size: cover;
 	background-position: center center;
 	color: white;
+	overflow: hidden;
 }

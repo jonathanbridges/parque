@@ -1,56 +1,38 @@
 import "./app.css";
-import "@fontsource/roboto/300.css";
-import "@fontsource/roboto/400.css";
-import "@fontsource/roboto/500.css";
-import "@fontsource/roboto/700.css";
-import { Alert, Snackbar, CssBaseline, Typography } from "@mui/material";
+import { Drawer, Typography } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2"; // Grid version 2
+import Snarkbar from "./Components/Snarkbar/Snarkbar";
 
-import appStyles from "./App.module.css";
-import { useEffect, useRef, useState } from "react";
+import Snarkbutton from "./Components/Snarkbutton/Snarkbutton";
+import { useState } from "react";
+import SnarkDrawer from "./Components/SnarkDrawer/SnarkDrawer";
+import BackgroundBox from "./Components/BackgroundBox/BackgroundBox";
 
-function App() {
-	const [open, setOpen] = useState<boolean>(false);
-	const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>();
+/**
+ *
+ * @returns the main layout, css reset, and the snarkbar
+ */
+export default function App() {
+	const [showDrawer, setShowDrawer] = useState<boolean>(false);
 
-	const handleClose = (): void => {
-		if (timeoutRef.current) {
-			clearTimeout(timeoutRef.current);
-			timeoutRef.current = null;
-			setOpen(false);
-		}
+	const toggleDrawer = (): void => {
+		setShowDrawer((show: boolean) => !show);
 	};
-
-	useEffect(() => {
-		timeoutRef.current = setTimeout(() => {
-			setOpen(true);
-		}, 3000);
-
-		return () => {
-			handleClose();
-		};
-	}, []);
 
 	return (
 		<>
-			<CssBaseline />
-			<Grid className={appStyles.con} spacing={1}>
-				<Grid>
-					<Typography variant="h1">iRate Parking</Typography>
+			<BackgroundBox>
+				<Grid spacing={1}>
+					<Grid>
+						<Typography variant="h1">iRate Parking</Typography>
+					</Grid>
+					<Snarkbutton toggleDrawer={toggleDrawer} />
 				</Grid>
-			</Grid>
-			<Snackbar open={open} onClose={handleClose}>
-				<Alert
-					onClose={handleClose}
-					severity="success"
-					variant="filled"
-					sx={{ width: "100%" }}
-				>
-					Look at you! Parking <i>and</i> surfing the interwebz!
-				</Alert>
-			</Snackbar>
+				<Snarkbar />
+				<Drawer open={showDrawer} onClose={toggleDrawer}>
+					<SnarkDrawer />
+				</Drawer>
+			</BackgroundBox>
 		</>
 	);
 }
-
-export default App;
