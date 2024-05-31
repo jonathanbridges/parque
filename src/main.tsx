@@ -1,13 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { RouterProvider, createHashRouter } from "react-router-dom";
 import ErrorPage from "./ErrorPage.tsx";
 import Ratings from "./routes/ratings.tsx";
 import Root from "./routes/root";
 
 // set up routes using react-router
-const router = createBrowserRouter([
+const router = createHashRouter([
 	{
 		path: "/",
 		element: <Root />,
