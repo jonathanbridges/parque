@@ -1,7 +1,7 @@
 import { Box, List } from "@mui/material";
-import SnarkListItem from "../SnarkListItem/SnarkListItem";
 import { Rating } from "../../enums";
 import { ratings } from "../../utils/Utils";
+import SnarkListItem from "../SnarkListItem/SnarkListItem";
 
 export default function SnarkDrawer() {
 	return (

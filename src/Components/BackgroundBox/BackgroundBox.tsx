@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
-import styles from "./BackgroundBox.module.css";
 import { PropsWithChildren } from "react";
+import styles from "./BackgroundBox.module.css";
 
 /**
  *

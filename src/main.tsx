@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
 import { RouterProvider, createHashRouter } from "react-router-dom";
 import ErrorPage from "./ErrorPage.tsx";
+import "./index.css";
 import Ratings from "./routes/ratings.tsx";
 import Root from "./routes/root";
 

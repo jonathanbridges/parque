@@ -1,5 +1,5 @@
-import { useRef, useEffect, useState } from "react";
 import { Alert, Snackbar } from "@mui/material";
+import { useEffect, useRef, useState } from "react";
 
 /**
  *
@@ -31,7 +31,7 @@ export default function Snarkbar() {
 		<Snackbar
 			open={open}
 			onClose={handleClose}
-			autoHideDuration={4000}
+			autoHideDuration={3500}
 			anchorOrigin={{ vertical: "top", horizontal: "center" }}
 		>
 			<Alert

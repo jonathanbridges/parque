@@ -1,12 +1,12 @@
-import "./app.css";
 import { Drawer, Typography } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2"; // Grid version 2
 import Snarkbar from "./Components/Snarkbar/Snarkbar";
+import "./app.css";
 
-import Snarkbutton from "./Components/Snarkbutton/Snarkbutton";
 import { useState } from "react";
-import SnarkDrawer from "./Components/SnarkDrawer/SnarkDrawer";
 import BackgroundBox from "./Components/BackgroundBox/BackgroundBox";
+import SnarkDrawer from "./Components/SnarkDrawer/SnarkDrawer";
+import Snarkbutton from "./Components/Snarkbutton/Snarkbutton";
 
 /**
  *

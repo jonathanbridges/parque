@@ -1,11 +1,11 @@
-import { AlertProps } from "@mui/material";
-import { Rating } from "../enums";
-import { ReactNode } from "react";
 import CelebrationIcon from "@mui/icons-material/Celebration";
+import MoodBadIcon from "@mui/icons-material/MoodBad";
 import NoCrashIcon from "@mui/icons-material/NoCrash";
 import PsychologyAltIcon from "@mui/icons-material/PsychologyAlt";
 import ThumbDownOffAltIcon from "@mui/icons-material/ThumbDownOffAlt";
-import MoodBadIcon from "@mui/icons-material/MoodBad";
+import { AlertProps } from "@mui/material";
+import { ReactNode } from "react";
+import { Rating } from "../enums";
 
 export const ratings: Rating[] = [
 	Rating.A,
