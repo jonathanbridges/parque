@@ -24,7 +24,14 @@ export default function App() {
 			<BackgroundBox>
 				<Grid spacing={1}>
 					<Grid>
-						<Typography variant="h1">iRate Parking</Typography>
+						<Typography
+							variant="h1"
+							sx={{
+								textShadow: "1px 1px 2px black, 0 0 1em black, 0 0 0.2em black"
+							}}
+						>
+							iRate Parking
+						</Typography>
 					</Grid>
 					<Snarkbutton toggleDrawer={toggleDrawer} />
 				</Grid>

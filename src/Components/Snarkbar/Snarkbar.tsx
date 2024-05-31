@@ -20,7 +20,7 @@ export default function Snarkbar() {
 	useEffect(() => {
 		timeoutRef.current = setTimeout(() => {
 			setOpen(true);
-		}, 3000);
+		}, 2500);
 
 		return () => {
 			handleClose();
@@ -28,7 +28,12 @@ export default function Snarkbar() {
 	}, []);
 
 	return (
-		<Snackbar open={open} onClose={handleClose} autoHideDuration={8000}>
+		<Snackbar
+			open={open}
+			onClose={handleClose}
+			autoHideDuration={4000}
+			anchorOrigin={{ vertical: "top", horizontal: "center" }}
+		>
 			<Alert
 				onClose={handleClose}
 				severity="success"

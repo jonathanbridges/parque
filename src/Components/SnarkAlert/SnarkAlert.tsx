@@ -23,7 +23,12 @@ export default function SnarkAlert({ rating }: Props) {
 			<AlertTitle sx={{ fontSize: "3rem", marginBottom: "0px" }}>
 				{title}
 			</AlertTitle>
-			<Typography component={"span"}>{description}</Typography>
+			<Typography
+				component={"span"}
+				sx={{ fontSize: "1.25rem", fontWeight: "medium" }}
+			>
+				{description}
+			</Typography>
 		</Alert>
 	);
 }

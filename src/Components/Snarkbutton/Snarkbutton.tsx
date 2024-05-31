@@ -25,7 +25,7 @@ export default function Snarkbutton({ toggleDrawer }: Props) {
 	useEffect(() => {
 		timeoutRef.current = setTimeout(() => {
 			setChecked(true);
-		}, 5000);
+		}, 1000);
 
 		return () => {
 			handleClose();
@@ -33,7 +33,7 @@ export default function Snarkbutton({ toggleDrawer }: Props) {
 	}, []);
 
 	return (
-		<Slide direction="left" in={checked}>
+		<Slide direction="left" in={checked} timeout={{ enter: 750, exit: 500 }}>
 			<Grid>
 				<Button
 					variant="contained"
